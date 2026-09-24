@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <script src="rayos-pages.js"></script>
+    <script src="index.js"></script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eletrônica Rayos - Gerenciamento de Ordens de Serviço</title>
+    <link rel="stylesheet" href="rayos.css">
+</head>
+
+<body>
+    <main class="narrow login">
+        <section class="card">
+            <h2 style="color:var(--pr)">⚡ Eletrônica Rayos</h2>
+            <p class="mu">Sistema de gerenciamento e acompanhamento de serviços</p>
+            <form onsubmit="login(event)"><label>E-mail<input name="email" id="le" type="email"
+                        required></label><label>Senha<input name="senha" id="ls" type="password"
+                        required></label><button class="btn" style="width:100%">Entrar</button></form>
+            <p class="mu" style="margin:14px 0 0">Acessos de demonstração:</p>
+            <div class="demo"><button class="btn g"
+                    onclick="fill('admin@rayos.com','admin123')">Administrador</button><button class="btn g"
+                    onclick="fill('func@rayos.com','func123')">Funcionário</button><button class="btn g"
+                    onclick="fill('cliente@rayos.com','123456')">Cliente</button></div>
+            <p id="loginError" class="mu"></p>
+        </section>
+        <section class="card">
+            <p class="mu" style="margin:0 0 10px">Ainda não possui uma conta? Cadastre-se agora mesmo e acompanhe suas
+                Ordens de Pedido</p><a class="btn g" href="cadastro cliente.html"
+                style="width:100%;text-align:center">Cadastre-se aqui</a>
+        </section>
+        <section class="card">
+            <h3>Para mais informações entre em contato com:</h3>
+            <div class="actions"><a class="btn" href="mailto:lucioguerra42@gmail.com">E-mail</a><a class="btn"
+                    href="https://wa.me/5519983067315" target="_blank" rel="noopener">WhatsApp</a></div>
+        </section>
+    </main>
+
+</body>
+
+</html>

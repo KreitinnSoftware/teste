@@ -1,0 +1,3 @@
+const deviceDb=loadDb();
+$('#client').innerHTML=(deviceDb.users||[]).filter(user=>user.perfil==='cliente').map(user=>`<option value="${user.id}">${escapeHtml(user.nome)}</option>`).join('');
+$('#deviceForm').addEventListener('submit',event=>{event.preventDefault();const form=event.target;deviceDb.nid=deviceDb.nid||{u:1,d:1,o:1};const device={id:deviceDb.nid.d++,uid:Number(form.client.value),tipo:form.type.value,marca:form.brand.value,modelo:form.model.value,serie:form.serial.value,defeito:form.problem.value};deviceDb.devs.push(device);deviceDb.ords.push({id:deviceDb.nid.o++,did:device.id,status:'Recebido',diag:'',orc:0,entrada:new Date().toLocaleDateString('pt-BR'),hist:[]});saveDb(deviceDb);location.href='pedidos pendentes.html'});
